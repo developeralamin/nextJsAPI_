@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
 use Stripe;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
 
 
 class StripePaymentController extends Controller
@@ -14,7 +15,6 @@ class StripePaymentController extends Controller
      */
     public function index()
     {
-
         return view('stripe');
     }
     /**

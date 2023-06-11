@@ -155,6 +155,10 @@ return [
     |
     */
 
+    'stripe' => [
+        'secret' => env('STRIPE_SECRET'),
+    ],
+
     'providers' => ServiceProvider::defaultProviders()->merge([
         /*
          * Package Service Providers...
