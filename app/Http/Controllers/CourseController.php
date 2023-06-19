@@ -22,6 +22,10 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required'
+        ]);
+
         $data   = $request->all();
         $course =  Course::create($data);
 
@@ -55,7 +59,7 @@ class CourseController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
         $course =  Course::findOrFail($id);
         $course->delete();

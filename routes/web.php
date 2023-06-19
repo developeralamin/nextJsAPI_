@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LessonController;
 use App\Http\Controllers\StripePaymentController;
 
 
@@ -10,3 +11,5 @@ Route::get('/', function () {
 
 Route::get('/stripe', [StripePaymentController::class, 'index']);
 Route::post('/stripe', [StripePaymentController::class, 'stripePost'])->name('stripe.post');
+
+Route::get('jobs', [LessonController::class, 'index']);
