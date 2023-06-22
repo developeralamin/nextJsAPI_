@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\LoginRequest;
+use App\Http\Requests\RegistrationRequest;
 use App\Http\Resources\AuthResource;
 use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -17,7 +18,7 @@ class AuthController extends Controller
      *
      * @return JsonResponse|Response
      */
-    public function login(Request $request)
+    public function login(LoginRequest $request)
     {
         $user = User::where('email', $request->email)->first();
 
@@ -42,7 +43,7 @@ class AuthController extends Controller
      *
      * @return Response
      */
-    public function registration(Request $request)
+    public function registration(RegistrationRequest $request)
     {
         User::create([
             'name'     => $request->name,

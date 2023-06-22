@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\LessonRequest;
 use App\Http\Resources\CourseResource;
 use App\Models\Course;
 use Illuminate\Http\Request;
@@ -20,12 +21,8 @@ class CourseController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(LessonRequest $request)
     {
-     /*    $request->validate([
-            'name' => 'required'
-        ]);
- */
         $data   = $request->all();
         $course =  Course::create($data);
 
