@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Resources\AuthResource;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
@@ -51,4 +52,19 @@ class AuthController extends Controller
 
         return $this->success('User created successfully', 201);
     }
+
+/**
+ * Auth user
+ */
+    /**
+     * @return Response
+     */
+    public function authUser()
+    {
+        $user = Auth::user();
+
+        return $this->success($user);
+    }
+
+
 }
