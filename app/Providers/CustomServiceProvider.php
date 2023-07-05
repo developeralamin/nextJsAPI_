@@ -11,7 +11,7 @@ class CustomServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-       app()->bind('sum',function(){
+       app()->bind('serviceProvider',function(){
         return new \App\Repositories\Calculate;
        });
     }

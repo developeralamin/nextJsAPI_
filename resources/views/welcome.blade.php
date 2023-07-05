@@ -885,6 +885,7 @@
 
                             <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">
                                 Laracasts  --Service Provider {{ $number['a'] }}</h2>
+                                <p>Custom facade {{  Twite::substruction() }}</p>
                                 <p>Custom facade {{ $customFacade }}</p>
 
                             <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">

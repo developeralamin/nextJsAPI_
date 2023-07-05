@@ -12,7 +12,7 @@ class Calculate {
         $number1 = 12;
         $number2 = 20;
         $subThisNumber = $number1 - $number2;
-        dd($subThisNumber);
+        return $subThisNumber;
    }
 }
 
