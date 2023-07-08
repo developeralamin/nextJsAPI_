@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -14,4 +15,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::resource('/course', CourseController::class)->except(['create', 'edit']);
 });
 
+Route::apiResources([
+    'shop' => ShopController::class,
+    // 'course'=> CourseController::class
+]);
 // Route::resource('/course', CourseController::class)->except(['create', 'edit']);
