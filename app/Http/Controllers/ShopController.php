@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ShopRequest;
 use App\Http\Resources\ShopResource;
 use App\Models\Shop;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class ShopController extends Controller
@@ -48,7 +49,7 @@ class ShopController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(ShopRequest $request, string $id)
+    public function update(Request $request, string $id)
     {
         $data = $request->all();
         $shop = Shop::findOrFail($id);
