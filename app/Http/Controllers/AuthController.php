@@ -52,11 +52,12 @@ class AuthController extends Controller
         ]);
 
         return $this->success('User created successfully', 201);
+        /*   */
     }
 
-/**
- * Auth user
- */
+    /**
+     * Auth user
+     */
     /**
      * @return Response
      */
@@ -66,6 +67,4 @@ class AuthController extends Controller
 
         return $this->success($user);
     }
-
-
 }
